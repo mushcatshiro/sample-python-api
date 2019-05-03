@@ -15,10 +15,14 @@ Install all python module dependencies in requirements.txt
 
 ## Usage
 
+newlines are intentionally added for better reading 
+
 * **C**RUD
 
 ```
-curl -XGET http://127.0.0.1:8000/create -H "Content-Type:application/json" -d '{"customer_name":"NAME","customer_dob":"YYYY-MM-DD"}'
+curl -XGET http://127.0.0.1:8000/create 
+	-H "Content-Type:application/json" 
+	-d '{"customer_name":"NAME","customer_dob":"YYYY-MM-DD"}'
 ```
 
 
@@ -26,14 +30,18 @@ curl -XGET http://127.0.0.1:8000/create -H "Content-Type:application/json" -d '{
 
 
 ```
-curl -XGET http://127.0.0.1:8000/read -H "Content-Type:application/json" -d '{"customer_name":"NAME","customer_dob":"YYYY-MM-DD"}'
+curl -XGET http://127.0.0.1:8000/read 
+	-H "Content-Type:application/json" 
+	-d '{"customer_name":"NAME"}'
 ```
 
 
 * CR**U**D
 
 ```
-curl -XGET http://127.0.0.1:8000/update -H "Content-Type:application/json" -d '{"customer_name":"NAME","customer_dob":"YYYY-MM-DD"}'
+curl -XGET http://127.0.0.1:8000/update 
+	-H "Content-Type:application/json" 
+	-d '{"customer_name":"NAME","customer_dob":"YYYY-MM-DD", "customer_id":"ID_num"}'
 
 ```
 
@@ -41,6 +49,8 @@ curl -XGET http://127.0.0.1:8000/update -H "Content-Type:application/json" -d '{
 * CRU**D**
 
 ```
-curl -XGET http://127.0.0.1:8000/delete -H "Content-Type:application/json" -d '{"customer_name":"NAME","customer_dob":"YYYY-MM-DD"}'
+curl -XGET http://127.0.0.1:8000/delete 
+	-H "Content-Type:application/json" 
+	-d '{"customer_name":"NAME"}'
 
 ```
