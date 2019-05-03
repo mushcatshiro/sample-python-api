@@ -10,23 +10,24 @@ The project uses mariadb as the database and is tested with gunicorn in linux en
 
 Install all python module dependencies in requirements.txt
 
+### Linux
+
+mariadb installation
+
+```
+sudo apt-get mariadb
+```
+
 ## Delpoy
 
 ```
 gunicorn __main__:api
 ```
 
-### Linux
-
-installation mariadb
-
-```
-sudo apt-get mariadb
-```
-
 ## Usage
 
 newlines are intentionally added for better reading 
+
 
 * **C**RUD
 

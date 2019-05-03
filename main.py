@@ -64,9 +64,9 @@ class delete_customers:
 				info["message"] = 'updated'
 				# suppossely to be only deleting exist entries and print delete success
 				resp.body = json.dumps(info)
-				conn_cursor.execute("SELECT * FROM customers")
-				result = conn_cursor.fetchall()
-				print(result)
+				# conn_cursor.execute("SELECT * FROM customers")
+				# result = conn_cursor.fetchall()
+				# print(result)
 			# except:
 			# 	conn_cursor.execute("SELECT * FROM customers")
 			# 	result = conn_cursor.fetchall()
@@ -88,9 +88,9 @@ class update_customers:
 				info["message"] = 'updated'
 				# supposely to only update exist entries
 				resp.body = json.dumps(info)
-				conn_cursor.execute("SELECT * FROM customers")
-				result = conn_cursor.fetchall()
-				print(result)
+				# conn_cursor.execute("SELECT * FROM customers")
+				# result = conn_cursor.fetchall()
+				# print(result)
 			# except:
 			# 	conn_cursor.execute("SELECT * FROM customers")
 			# 	result = conn_cursor.fetchall()
