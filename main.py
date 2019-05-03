@@ -19,8 +19,16 @@ class create_customers:
 		# print(data['customer_name'], data['customer_dob'])
 		# change json to python dict
 		insert_tuple = (data['customer_name'], data['customer_dob'])
-		with conn:
-			conn_cursor.execute("INSERT INTO customers (customer_id, customer_name, customer_dob, customer_update_at) VALUES (NULL, %s, %s, now())",insert_tuple)
+		try:
+			with conn:
+				conn_cursor.execute("INSERT INTO customers (customer_id, customer_name, customer_dob, customer_update_at) VALUES (NULL, %s, %s, now())",insert_tuple)
+				info ={}
+				info['message'] = 'added'
+				resp.body = json.dumps(info)
+		except:
+			info ={}
+			info['message'] = 'error'
+			resp.body = json.dumps(info)
 
 class read_customers:
 	def on_get(self, req, resp):
@@ -41,7 +49,7 @@ class read_customers:
 			try:
 				conn_cursor.execute("SELECT * FROM customers WHERE customer_name = %s", insert_tuple)
 				result = conn_cursor.fetchall()
-				print(result)
+				# print(result)
 				info = {}
 				info["ID"] = result[0][0]
 				info["Name"] = result[0][1]
@@ -64,6 +72,8 @@ class delete_customers:
 				info["message"] = 'updated'
 				# suppossely to be only deleting exist entries and print delete success
 				resp.body = json.dumps(info)
+			except:
+				pass
 				# conn_cursor.execute("SELECT * FROM customers")
 				# result = conn_cursor.fetchall()
 				# print(result)
@@ -88,6 +98,8 @@ class update_customers:
 				info["message"] = 'updated'
 				# supposely to only update exist entries
 				resp.body = json.dumps(info)
+			except:
+				pass
 				# conn_cursor.execute("SELECT * FROM customers")
 				# result = conn_cursor.fetchall()
 				# print(result)
