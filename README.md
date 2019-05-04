@@ -56,7 +56,7 @@ curl -XGET http://127.0.0.1:8000/update
 
 ```
 curl -XGET http://127.0.0.1:8000/delete 
-	-d '{"customer_name":"NAME"}'
+	-d '{"customer_name":"NAME","customer_id":"ID_num"}'
 ```
 
 ### query of "to get names of the youngest customers"

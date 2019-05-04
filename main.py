@@ -65,10 +65,10 @@ class read_customers:
 class delete_customers:
 	def on_get(self, req, resp):
 		data = json.loads(req.stream.read())
-		insert_tuple = (data['customer_name'])
+		insert_tuple = (data['customer_name'], data['customer_id'])
 		with conn:
 			try:
-				conn_cursor.execute("DELETE FROM customers WHERE customer_name = %s", (insert_tuple,))
+				conn_cursor.execute("DELETE FROM customers WHERE customer_name = %s AND customer_id = %s", insert_tuple)
 				info = {}
 				info["message"] = 'updated'
 				# suppossely to be only deleting exist entries and print delete success
