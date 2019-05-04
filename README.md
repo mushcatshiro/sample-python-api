@@ -15,7 +15,7 @@ With venv activated
 pip install -r requirements.txt
 ```
 
-### mariadb installation in linux machine
+mariadb installation in linux machine
 
 ```
 sudo apt-get mariadb
