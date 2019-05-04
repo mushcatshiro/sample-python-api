@@ -20,7 +20,7 @@ sudo apt-get mariadb
 
 ## Delpoy
 
-Make necessary in information.py for the database connection before running the line below.
+Make necessary changes in information.py for the database connection before starting WSGI.
 
 ```
 gunicorn __main__:api
