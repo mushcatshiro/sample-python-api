@@ -4,7 +4,7 @@ import json
 import falcon
 
 
-conn = pymysql.connect(host='localhost', database='mysql', user='root', password='1234')
+conn = pymysql.connect(host='localhost', database='mysql', user='USERNAME', password='PASSWORD')
 conn_cursor = conn.cursor()
 # conn_cursor.execute("""CREATE TABLE customers (customer_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 # 											  customer_name VARCHAR(50),
