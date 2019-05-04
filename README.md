@@ -3,12 +3,17 @@ backend engineer assessment
 
 ## Requirements
 
-This project uses venv as isolated python environment for installation and running. Therefore, venv must be installed. All dependency library informations can be find in install.sh.
+This project uses venv as isolated python environment for installation and running. Therefore, venv must be installed. All dependency library informations can be find in requirements.txt.
 The project uses mariadb as the database and is tested with gunicorn in linux environment.
 
 ## Installation
 
 Install all python module dependencies in requirements.txt
+
+With venv activated
+```
+pip install -r requirements.txt
+```
 
 ### Linux
 
