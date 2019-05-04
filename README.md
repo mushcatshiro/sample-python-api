@@ -23,7 +23,7 @@ sudo apt-get mariadb
 Make necessary changes in information.py for the database connection before starting WSGI.
 
 ```
-gunicorn __main__:api
+gunicorn main:api
 ```
 
 ## Usage
