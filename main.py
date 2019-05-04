@@ -2,9 +2,10 @@ import pymysql
 import datetime
 import json
 import falcon
+import information
 
 
-conn = pymysql.connect(host='localhost', database='mysql', user='USERNAME', password='PASSWORD')
+conn = pymysql.connect(host=information.host, database=information.database, user=information.user, password=information.password)
 conn_cursor = conn.cursor()
 # conn_cursor.execute("""CREATE TABLE customers (customer_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 # 											  customer_name VARCHAR(50),
