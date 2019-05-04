@@ -7,11 +7,17 @@ import information
 
 conn = pymysql.connect(host=information.host, database=information.database, user=information.user, password=information.password)
 conn_cursor = conn.cursor()
-# conn_cursor.execute("""CREATE TABLE customers (customer_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-# 											  customer_name VARCHAR(50),
-# 											  customer_dob DATE,
-# 											  customer_update_at DATETIME)
-# 	""")
+
+try:
+	conn_cursor.execute("""CREATE TABLE customers (customer_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+												  customer_name VARCHAR(50),
+												  customer_dob DATE,
+												  customer_update_at DATETIME)
+		""")
+except:
+	pass
+
+class login:
 
 
 class create_customers:
