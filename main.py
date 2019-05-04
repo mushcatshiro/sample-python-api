@@ -17,9 +17,6 @@ try:
 except:
 	pass
 
-class login:
-
-
 class create_customers:
 	def on_get(self, req, resp):
 		data = json.loads(req.stream.read())
